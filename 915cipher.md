@@ -23,3 +23,12 @@ key = os.userrandom(16)
 - AES Mode of Operation determines how AES encrypts larger texts
 - The simplest, yet not ideal mode of operation is ECB: Electronic Code Block
 
+#### aes waits until it has a full block before it starts decrypting
+*calls to the update function accumulate the data*  
+
+# AES Modes of operation
+- electronic code book (ECB)
+- ciper block chaining (CBC)
+- counter mode (CTR)
+- galois/counter mode (GCM)
+  - (recommended in many modes)
