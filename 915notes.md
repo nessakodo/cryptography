@@ -12,6 +12,13 @@ work requirement - to find a valid hash under a threshold ensures miners have do
 sha-256 puzzle: given a block
 looking for a hash value where the initial 12 bits are 0, like 0000
 
+## SHA-256 Puzzle
+
+SHA-256 Puzzle: Given a Block, miners need to find a nonce value that satisfies the
+following equation (ensuring hash value is under Threshold):
+
+SHA-256(Block + nonce) < Threshold (e.g. 2^{236})
+
 # Valid vs Non-Valid nonces
 
 two block hashes with the same content but different nonce values, a nonce that produces a hash with 20 leading binary 0s, (5 in hexa) is valid
@@ -26,3 +33,5 @@ requiring 20 leading 0s is the same as requiring that the hash number be less th
 - no central authority dictates this, the majority rules
   - each participant follows the standard algorithm to compute the required number of leading zeros for a valid hash
   - if someone deviates, their blocks are rejected
+
+
